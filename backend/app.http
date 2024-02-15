@@ -1,0 +1,85 @@
+
+
+
+POST http://localhost:5000/admin/signup
+Content-Type: application/json
+
+
+{
+    "userName": "Miicvvbia",
+    "email": "mana@thnfgb2give",   
+    "password": "35789"
+}
+
+
+###
+POST http://localhost:5000/admin/createTask
+Content-Type: application/json
+
+{
+    "taskName":"CLOTHING",
+    "taskType":"HELLO",
+    "description":"HELLO",
+    "startDate":"03/04/2024",
+    "endDate":"03/04/2024",
+    "assigne":"JOHN DOE"
+}
+
+
+###
+GET http://localhost:5000/
+
+
+
+###
+GET http://localhost:5000/01a06b7-94ec-484c-a54a-fcf465d01f2f
+
+
+
+###
+PUT http://localhost:5000/update/01a06b7-94ec-484c-a54a-fcf465d01f2f
+
+   {
+      "userName": "martin ngugi",
+      "email": "yelnats22@GMAIL.COM",
+      "Password": "780780"
+  }
+
+###
+DELETE  http://localhost:5000/delete/02c628ea-fb45-4264-8e0e-37da7f4a349d
+
+###
+GET http://localhost:5000/0a82705c-8f5a-4164-9248-ac78646f46d5
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGE4MjcwNWMtOGY1YS00MTY0LTkyNDgtYWM3ODY0NmY0NmQ1IiwiZW1haWwiOiJjYW5kYWNlQGdtYWlsLmNvbSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE3MDc3NDM3MjUsImV4cCI6MTcwNzc0NzMyNX0.GzSHIbEHu0XcQKx30jfVa6Jfz2tzbM1rWZ75-E73gpc
+
+
+
+###
+GET http://localhost:5000/
+
+
+
+
+####
+POST http://localhost:5000/auth/login
+
+Content-Type: application/json
+{
+    "email": "yuo.com",
+    "password": "12345"
+}
+
+####Reset password
+PUT http://localhost:5000/auth/reset_pwd
+Content-Type: application/json
+
+{
+    "email": "janengene12@gmail.com",
+    "phone_number": "0703255690",
+    "password": "12345678"
+}
+
+####
+POST http://localhost:5000/auth/checkdetails
+Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjA2ZmY5YjUtNTQxMy00ZjIwLWIzNDMtNTAxMjg1ZmNmMGEzIiwibmFtZSI6Ik1lc2hhY2sgS29yaXIiLCJlbWFpbCI6Im1lc2hhY2trb3JpcjEwMEBnbWFpbC5jb20iLCJwaG9uZV9udW1iZXIiOiIwMTk4Njc4MzMwIiwicm9sZSI6ImN1c3RvbWVyIiwiaXNXZWxjb21lZCI6dHJ1ZSwiaWF0IjoxNzA3MzA4MDgyLCJleHAiOjE3MDczMTE2ODJ9.ZG9z99DedQoS_F3AujeqYIeyWFUB6PxYnvprTKHOgqg

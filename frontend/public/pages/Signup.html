@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp Page</title>
+    <link rel="stylesheet" href="../index.css">
+
+
+    <style>
+        .back-arrow {
+            position: absolute;
+            top: 40px; 
+            left: 20px; 
+            font-weight: bold;
+            color: #06A67E; 
+            font-size: 28px; 
+            text-decoration: none; 
+        }
+</style>
+
+</head>
+<body>
+    <a href="./landing.html" class="back-arrow">&#8592; Back Home</a>
+    <div class="sign-up-wrapper">
+    <div class="sign-up-container">
+
+        <div class="sign-up-image">
+            <h3>Welcome!</h3>
+            <p>To keep you conected with us please CREATE an account. </p>
+           <div class="bottom-signup">
+               <p>Already have an account?
+                   <br>
+                   LOG IN here.
+               </p>
+               <button type="submit" id="sign-up-btn">LOGIN</button>
+               
+           </div>
+        </div>
+        <form class="sign-up-form">
+            <h2>CREATE ACCOUNT</h2>
+            <p class="success-msg"></p>
+            <input type="text" id="username" placeholder="Username" name="username" required>
+            <input type="email" id="email" placeholder="Email" name="username" required>
+            <input type="password" id="password" placeholder="Password" name="password" required autocomplete="on">
+            <button type="submit" id="login-btn">SIGN UP</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const backArrow = document.querySelector('.back-arrow');
+        backArrow.addEventListener('click', function(event) {
+            event.preventDefault(); 
+            window.history.replaceState({}, '', './landing.html');
+            window.location.href = "./landing.html";
+        });
+    });
+    </script>
+
+<script  defer src="../../dist/pages/Signup.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

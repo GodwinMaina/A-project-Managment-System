@@ -1,0 +1,149 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMIN DASHBOARD</title>
+</head>
+<link rel="stylesheet" href="../index.css">
+<body>
+
+<style>
+        #logoutBtn {
+
+    margin-top: -40px;
+    padding: 10px 20px; 
+    background-color: #FF6347; 
+    color: white; 
+    border: none; 
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#logoutBtn:hover {
+    background-color: #FF4500; 
+}
+</style>
+
+    <!-- adminContainer -->
+    <div class="adminContainer">
+    <!-- sidebar -->
+        <div class="sidebar">
+
+            <button id="logoutBtn">Log Out</button>
+
+
+            <div class="create">
+
+            <a href="../pages/TaskCreate.html">Create Project</a>
+            </div>
+
+            <div>
+                Dashboard
+            </div>
+
+            <div>
+                Project
+            </div>
+
+            <div>
+                <a href="../public/UserPage.html"></a>
+                Users
+            </div>
+
+            <div>
+                Messages
+            </div>
+        </div>
+    <!-- sidebar end -->
+
+        <!-- content centre -->
+        <div class="adminContent">
+            <!-- navbar -->
+            <div class="navbar">
+                <div class="dashboard">
+                    ADMIN DASHBOARD
+                </div>
+              <div class="profile">
+                     <div>
+                        <img  class="imgadmin" src="../assets/user2.png" alt="" srcset="">
+                    </div>
+
+                 <div class="admindetails">
+                    <div class="name">ADMIN</div>
+                    <div class="subname"></div>
+                 </div> 
+                </div>
+            </div>
+            <!-- navbar end -->
+
+            <div class="projectTable">
+                <table class="projectTabs">
+                    <thead>
+                      <tr>
+                        <th>TASK NAME</th>
+                        <th>ASSIGNEE</th>
+                        <th>TASK TYPE</th>
+                        <th>DESCRIPTION</th>
+                        <th>START DATE</th>
+                        <th>END DATE</th>
+                        <!-- <th>STATUS</th> -->
+                        <th>ACTIONS</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <!-- Single Row -->
+                      <!-- append tasks -->
+                      <div>
+                      <tr>
+                       
+                      </tr>
+                    </div>
+
+                    </tbody>
+                  </table>
+            </div>
+
+
+            <!-- div append all users signed in-->
+            <div class="allUsers">
+
+            </div>
+               <!-- div append all users signed in end-->
+
+
+            <!-- div append all messages-->
+            <div class="allUsers">
+
+            </div>
+               <!-- div append all messages end-->
+    
+
+
+
+
+        </div>
+         <!-- content centre end -->
+
+         
+    </div>
+    <!-- adminContainer end -->
+
+<script src="../../dist/pages/AdminPage.js"></script>
+
+<script>
+   
+    function logout() {
+     
+        localStorage.removeItem('token');
+        window.history.replaceState({}, document.title, '../pages/landing.html'); 
+        window.location.href = "../pages/landing.html";
+     
+     
+    }
+
+  
+    document.getElementById('logoutBtn').addEventListener('click', logout);
+</script>
+</body>
+</html>
